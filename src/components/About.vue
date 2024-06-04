@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center mx-auto space-x-10 max-lg:flex max-lg:flex-col max-lg:px-3">
+    <div class="flex justify-center mx-auto space-x-10 max-lg:flex max-lg:flex-col max-lg:px-3 mt-20">
         <img class="h-[60vh] rounded-lg" src="/about.jpg" alt="">
         <div class="mt-36 space-y-5 max-lg:mt-10">
             <h1 class="text-3xl font-bold text-[#BC9667]">OUR HISTORY</h1>

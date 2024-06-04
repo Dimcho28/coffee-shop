@@ -9,7 +9,7 @@ import Customers from './components/Customers.vue';
 <template>
   <Navbar />
   <Home />
-  <About />
-  <Products />
+  <About id="about"/>
+  <Products id="products"/>
   <Customers />
 </template>

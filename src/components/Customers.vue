@@ -1,5 +1,5 @@
 <template>
-    <div class=" container mx-auto mt-20">
+    <div id="call" class=" container mx-auto mt-20">
         <h1 class="text-3xl font-bold text-[#BC9667] text-center">OUR CUSTOMER'S</h1>
 
         <div class="flex space-x-10 justify-center max-lg:flex max-lg:flex-col max-lg:space-x-0 max-lg:space-y-5 max-lg:mt-10 max-lg:p-3">

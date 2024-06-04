@@ -2,83 +2,49 @@
     <div class=" container mx-auto mt-20 ">
         <h1 class="text-3xl font-bold text-[#BC9667] text-center">OUR POPULAR PRODUCTS</h1>
 
-        <div class="space-y-10 mt-10">
-            <div class="flex justify-center space-x-10 max-lg:flex max-lg:flex-col max-lg:space-x-0 max-lg:items-center max-lg:space-y-5">
-                <div class="shadow-xl rounded-lg w-fit p-5">
-                    <div class="bg-[#F1F1F1] w-56 flex justify-center rounded-lg">
-                        <img class="h-48" src="/card.png" alt="">
-                    </div>
-                    <h1 class="font-bold">AMERICANO PURE</h1>
-                    <div class="flex justify-between">
-                        <span class="bg-[#BC9667] text-white py-1 px-3 rounded-lg font-bold">$25</span>
-                        <button class="border-2 py-1 px-3 border-[#BC9667] rounded-lg hover:bg-[#BC9667] hover:text-white">ADD TO
-                            CART</button>
-                    </div>
-                </div>
-
-                <div class="shadow-xl rounded-lg p-5 w-fit">
-                    <div class="bg-[#F1F1F1] w-56 flex justify-center rounded-lg">
-                        <img class="h-48" src="/card2.png" alt="">
-                    </div>
-                    <h1 class="font-bold">AMERICANO PURE</h1>
-                    <div class="flex justify-between">
-                        <span class="bg-[#BC9667] text-white py-1 px-3 rounded-lg font-bold">$25</span>
-                        <button class="border-2 py-1 px-3 border-[#BC9667] rounded-lg hover:bg-[#BC9667] hover:text-white">ADD TO
-                            CART</button>
-                    </div>
-                </div>
-
-                <div class="shadow-xl rounded-lg p-5 w-fit">
-                    <div class="bg-[#F1F1F1] w-56 flex justify-center rounded-lg">
-                        <img class="h-48" src="/card3.png" alt="">
-                    </div>
-                    <h1 class="font-bold">AMERICANO PURE</h1>
-                    <div class="flex justify-between">
-                        <span class="bg-[#BC9667] text-white py-1 px-3 rounded-lg font-bold">$25</span>
-                        <button class="border-2 py-1 px-3 border-[#BC9667] rounded-lg hover:bg-[#BC9667] hover:text-white">ADD TO
-                            CART</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex justify-center space-x-10 max-lg:flex max-lg:flex-col max-lg:space-x-0 max-lg:items-center max-lg:space-y-5">
-                <div class="shadow-xl rounded-lg p-5 w-fit">
-                    <div class="bg-[#F1F1F1] w-56 flex justify-center rounded-lg">
-                        <img class="h-48" src="/card4.png" alt="">
-                    </div>
-                    <h1 class="font-bold">AMERICANO PURE</h1>
-                    <div class="flex justify-between">
-                        <span class="bg-[#BC9667] text-white py-1 px-3 rounded-lg font-bold">$25</span>
-                        <button class="border-2 py-1 px-3 border-[#BC9667] rounded-lg hover:bg-[#BC9667] hover:text-white">ADD TO
-                            CART</button>
-                    </div>
-                </div>
-
-                <div class="shadow-xl rounded-lg p-5 w-fit">
-                    <div class="bg-[#F1F1F1] w-56 flex justify-center rounded-lg">
-                        <img class="h-48" src="/card5.png" alt="">
-                    </div>
-                    <h1 class="font-bold">AMERICANO PURE</h1>
-                    <div class="flex justify-between">
-                        <span class="bg-[#BC9667] text-white py-1 px-3 rounded-lg font-bold">$25</span>
-                        <button class="border-2 py-1 px-3 border-[#BC9667] rounded-lg hover:bg-[#BC9667] hover:text-white">ADD TO
-                            CART</button>
-                    </div>
-                </div>
-
-                <div class="shadow-xl rounded-lg p-5 w-fit">
-                    <div class="bg-[#F1F1F1] w-56 flex justify-center rounded-lg">
-                        <img class="h-48" src="/card6.png" alt="">
-                    </div>
-                    <h1 class="font-bold">AMERICANO PURE</h1>
-                    <div class="flex justify-between">
-                        <span class="bg-[#BC9667] text-white py-1 px-3 rounded-lg font-bold">$25</span>
-                        <button class="border-2 py-1 px-3 border-[#BC9667] rounded-lg hover:bg-[#BC9667] hover:text-white">ADD TO
-                            CART</button>
-                    </div>
+        <div class="space-y-10 mt-10 max-lg:flex">
+            <div class="grid grid-cols-3 max-w-6xl gap-y-10 mx-auto max-lg:grid-cols-1">
+                <div v-for="coffee in coffees">
+                    <ProductCard :image="coffee.img" :title="coffee.title" :price="coffee.price"/>
                 </div>
             </div>
         </div>
 
     </div>
 </template>
+
+<script setup>
+import ProductCard from './ProductCard.vue'
+const coffees = [
+  {
+    title: "Espresso",
+    price: 2.99,
+    img: "/card.png"
+  },
+  {
+    title: "Latte",
+    price: 3.99,
+    img: "/card2.png"
+  },
+  {
+    title: "Cappuccino",
+    price: 3.49,
+    img: "/card3.png"
+  },
+  {
+    title: "Americano",
+    price: 2.49,
+    img: "/card4.png"
+  },
+  {
+    title: "Mocha",
+    price: 4.49,
+    img: "/card5.png"
+  },
+  {
+    title: "Macchiato",
+    price: 3.99,
+    img: "/card6.png"
+  },
+];
+</script>
